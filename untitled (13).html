@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Cutiest Pyara Bacha Sakshi</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Arial,sans-serif;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,120,170,.35), transparent 18%),
+    radial-gradient(circle at 80% 25%, rgba(255,90,140,.28), transparent 20%),
+    radial-gradient(circle at 50% 80%, rgba(255,120,170,.2), transparent 22%),
+    linear-gradient(180deg,#240008,#5d0018 45%, #a40032 100%);
+  color:#fff;
+}
+.page{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.page.active{display:flex}
+.card{
+  width:min(900px,94vw);
+  min-height:70vh;
+  padding:42px 30px;
+  border-radius:34px;
+  text-align:center;
+  background:rgba(30,0,10,.48);
+  border:1px solid rgba(255,255,255,.14);
+  backdrop-filter:blur(8px);
+  box-shadow:0 0 35px rgba(255,70,130,.35);
+  animation:softPulse 4s ease-in-out infinite;
+}
+.light .card{
+  background:rgba(255,240,246,.92);
+  color:#7a1738;
+}
+h1{
+  font-size:52px;
+  color:#ffd7e8;
+  text-shadow:0 0 18px rgba(255,180,220,.8);
+}
+h2{font-size:38px;margin-bottom:18px}
+p{font-size:20px;line-height:1.8;margin:12px 0}
+.sticker{
+  font-size:64px;
+  margin-bottom:10px;
+  animation:heartbeat 2s infinite;
+}
+.note{
+  max-width:620px;
+  margin:18px auto;
+  padding:18px;
+  border-radius:18px;
+  border:2px dashed rgba(255,255,255,.4)
+}
+.light .note{border-color:rgba(122,23,56,.25)}
+.shayari{font-style:italic;font-size:22px;margin-top:14px}
+.btn{
+  margin-top:26px;
+  padding:16px 38px;
+  border:0;
+  border-radius:40px;
+  font-size:22px;
+  cursor:pointer;
+  color:#fff;
+  background:#d94c83;
+  box-shadow:0 0 18px rgba(255,150,200,.55);
+  transition:.25s;
+}
+.btn:hover{
+  transform:scale(1.05);
+}
+.scroll-card{
+  overflow:auto;
+  max-height:82vh;
+}
+
+.float{
+  position:fixed;
+  font-size:26px;
+  opacity:.35;
+  pointer-events:none;
+  animation:floatUp 12s linear infinite;
+}
+.f1{left:8%;animation-delay:0s}
+.f2{left:22%;animation-delay:2s}
+.f3{left:38%;animation-delay:4s}
+.f4{left:55%;animation-delay:1s}
+.f5{left:72%;animation-delay:5s}
+.f6{left:88%;animation-delay:3s}
+
+@keyframes floatUp{
+  0%{
+    transform:translateY(110vh) scale(.8);
+    opacity:0;
+  }
+  20%{opacity:.4}
+  100%{
+    transform:translateY(-20vh) scale(1.2);
+    opacity:0;
+  }
+}
+
+@keyframes heartbeat{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+}
+
+@keyframes softPulse{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-4px)}
+}
+
+@media(max-width:800px){
+  h1{font-size:34px}
+  h2{font-size:28px}
+  p{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<audio id="bgMusic" loop preload="auto">
+  <source src="https://cdn.pixabay.com/download/audio/2022/02/22/audio_d1718ab41e.mp3?filename=romantic-love-14585.mp3" type="audio/mpeg">
+</audio>
+
+<div class="float f1">❤️</div>
+<div class="float f2">🌹</div>
+<div class="float f3">💕</div>
+<div class="float f4">🧸</div>
+<div class="float f5">🌹</div>
+<div class="float f6">💖</div>
+
+<div class="page active">
+  <div class="card">
+    <div class="sticker">🧸🌹💕</div>
+    <h1>For my cutiest<br>pyara bacha sakshi</h1>
+    <p>Ek saal... bohot special hai mere liye, kyunki iss ek saal ne meri zindagi ko tumse milkar khubsurat bana diya.</p>
+    <div class="note">Mera past kuch khaas nahi tha... par tumhare saath future bohot hi khaas banana hai. ❤️</div>
+    <p class="shayari">Tum aaye toh laga, zindagi ne phir se muskurana seekh liya.</p>
+    <button class="btn" onclick="nextPage()">❤ ENTER ❤</button>
+  </div>
+</div>
+
+<div class="page light">
+  <div class="card">
+    <div class="sticker">🎁🐻💗</div>
+    <h2>Ek chota sa gift</h2>
+    <p>Mera pyara baacha apke liye ek chota sa gift.</p>
+    <p>Dekho toh sahi... andar bohot kuch hai jo sirf tumhare liye hai.</p>
+    <p class="shayari">Har choti cheez mein ab bas tumhari yaad basi rehti hai.</p>
+    <button class="btn" onclick="nextPage()">OPEN</button>
+  </div>
+</div>
+
+<div class="page">
+  <div class="card">
+    <div class="sticker">🧸❤️🌹</div>
+    <h2>Dil ki baat</h2>
+    <p>Meri x ne mere saath bohot bura kiya tha. Main hurt tha, confuse rehta tha aur mentally disturbed bhi tha.</p>
+    <p>Kaafi waqt tak samajh nahi aata tha ki khud ko kaise sambhalu.</p>
+    <p class="shayari">Andar shor bohot tha, par chehre par khamoshi rehti thi.</p>
+    <button class="btn" onclick="nextPage()">NEXT</button>
+  </div>
+</div>
+
+<div class="page light">
+  <div class="card">
+    <div class="sticker">💕🧸✨</div>
+    <h2>Phir aap mile</h2>
+    <p>Phir aap mile... aur dheere dheere sab badal gaya.</p>
+    <p>Aapse hamesha sachha pyaar kiya hai. Aapne mujhe sukoon diya, hasi di aur phir se dil se jeena sikhaya.</p>
+    <p class="shayari">Tum mile toh laga, mere adhure dinon ko ghar mil gaya.</p>
+    <button class="btn" onclick="nextPage()">NEXT</button>
+  </div>
+</div>
+
+<div class="page">
+  <div class="card">
+    <div class="sticker">🌹🧸❤️</div>
+    <h2>Happy 1st Anniversary</h2>
+    <p>Main aapko kabhi hurt nahi karunga. Hamesha aapka saath dunga.</p>
+    <p>Jo ho, aap hi ho mere liye. Bhaut saara love you. ❤️</p>
+    <p class="shayari">Meri duniya ka sabse pyara hissa ho tum... aur hamesha rahoge.</p>
+    <button class="btn" onclick="nextPage()">LOVE SHAYARI</button>
+  </div>
+</div>
+
+<div class="page light">
+  <div class="card scroll-card">
+    <div class="sticker">🌹🧸💕✨</div>
+    <h2>Love Shayari</h2>
+
+    <p class="shayari">1. Tum meri aadat nahi, meri zaroorat ban gaye ho. ❤️</p>
+    <p class="shayari">2. Har din tumse baat ho jaaye, bas itna hi kaafi hai. 🌹</p>
+    <p class="shayari">3. Mere har khayal ki shuruaat tumse hoti hai. 💕</p>
+    <p class="shayari">4. Tum paas ho toh sab kuch apna sa lagta hai. 🧸</p>
+    <p class="shayari">5. Tumhari muskurahat mere din ki sabse khoobsurat baat hai. ✨</p>
+    <p class="shayari">6. Dil ko sukoon sirf tumhari baaton se milta hai. ❤️</p>
+    <p class="shayari">7. Tum mile toh laga sab adhura poora ho gaya. 🌹</p>
+    <p class="shayari">8. Meri duniya ka sabse pyara ehsaas tum ho. 💗</p>
+    <p class="shayari">9. Har baar tumhe dekh kar dil phir se dhadak uthta hai. 🧸</p>
+    <p class="shayari">10. Tum meri khushi ka sabse khoobsurat reason ho. ✨</p>
+    <p class="shayari">11. Mere dil ka sabse pyara kona tumhare naam hai. ❤️</p>
+    <p class="shayari">12. Tumhari yaad bhi kabhi kabhi muskurane ki wajah ban jaati hai. 🌹</p>
+    <p class="shayari">13. Bas itna sa khwaab hai — har safar tumhare saath ho. 💕</p>
+    <p class="shayari">14. Tumhare bina din adhoora sa lagta hai. 🧸</p>
+    <p class="shayari">15. Tum ho toh zindagi thodi aur khoobsurat lagti hai. ✨</p>
+    <p class="shayari">16. Mere dil ko tumhari aadat si ho gayi hai. ❤️</p>
+    <p class="shayari">17. Har choti khushi mein ab tum hi nazar aate ho. 🌹</p>
+    <p class="shayari">18. Tumhari awaaz sun kar dil ko sukoon milta hai. 💗</p>
+    <p class="shayari">19. Main jitna sochta hoon, har baar tum tak hi pahuchta hoon. 🧸</p>
+    <p class="shayari">20. Bhaut saara love you… hamesha. ❤️✨</p>
+
+    <button class="btn" onclick="nextPage()">NEXT</button>
+  </div>
+</div>
+
+<div class="page">
+  <div class="card">
+    <div class="sticker">💖🌹🧸✨</div>
+    <h2>Happy 1st Anniversary Bacchaaa</h2>
+    <p style="font-size:28px;font-weight:bold;margin-top:20px">
+      I loveeeeeeeeeeeeeeee uh so much ❤️
+    </p>
+    <p class="shayari">
+      Happy 1st anniversary bacchaaa… meri sabse pyari khushi tum ho.
+    </p>
+    <button class="btn" onclick="goFirst()">START AGAIN</button>
+  </div>
+</div>
+
+<script>
+const pages = document.querySelectorAll('.page');
+let current = 0;
+
+const music = document.getElementById('bgMusic');
+music.volume = 0.22;
+
+function playMusic(){
+  music.play().catch(() => {});
+}
+
+document.addEventListener('click', playMusic, { once:true });
+
+function nextPage(){
+  if(current < pages.length - 1){
+    pages[current].classList.remove('active');
+    current++;
+    pages[current].classList.add('active');
+  }
+}
+
+function goFirst(){
+  pages[current].classList.remove('active');
+  current = 0;
+  pages[current].classList.add('active');
+}
+</script>
+
+</body>
+</html>
